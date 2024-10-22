@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Calculation Results{% endblock %}
+
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="mb-4">Calculation Results</h2>
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% else %}
+        <table class="table table-striped">
+            <tr>
+                <th>IP Address:</th>
+                <td>{{ ip_address }}</td>
+            </tr>
+            <tr>
+                <th>Network ID:</th>
+                <td>{{ network_id }}</td>
+            </tr>
+            <tr>
+                <th>Next Network ID:</th>
+                <td>{{ next_network_id }}</td>
+            </tr>
+            <tr>
+                <th>Prefix:</th>
+                <td>{{ prefix }}</td>
+            </tr>
+            <tr>
+                <th>Broadcast Address:</th>
+                <td>{{ broadcast_address }}</td>
+            </tr>
+            <tr>
+                <th>Netmask:</th>
+                <td>{{ netmask }}</td>
+            </tr>
+            <tr>
+                <th>Hostmask:</th>
+                <td>{{ hostmask }}</td>
+            </tr>
+            <tr>
+                <th>Total Hosts:</th>
+                <td>{{ total_hosts }}</td>
+            </tr>
+            <tr>
+                <th>Usable Hosts:</th>
+                <td>{{ usable_hosts }}</td>
+            </tr>
+            <tr>
+                <th>First Host:</th>
+                <td>{{ first_host }}</td>
+            </tr>
+            <tr>
+                <th>Last Host:</th>
+                <td>{{ last_host }}</td>
+            </tr>
+            <tr>
+                <th>Host Range:</th>
+                <td>{{ Host_range }}</td>
+            </tr>
+            <tr>
+                <th>IP Type:</th>
+                <td>{{ ip_type }}</td>
+            </tr>
+            <tr>
+                <th>IP Class:</th>
+                <td>{{ ip_class }}</td>
+            </tr>
+        </table>
+    {% endif %}
+</div>
+{% endblock %}

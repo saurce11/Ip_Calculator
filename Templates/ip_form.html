@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}IP Calculator{% endblock %}
+
+{% block content %}
+<div class="card shadow  p-4">
+    <h2 class="mb-4">Enter IP and Subnet Mask</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.ip_address.label_tag }}
+            {{ form.ip_address }}
+        </div>
+        <div class="mb-3">
+            {{ form.mask.label_tag }}
+            {{ form.mask }}
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+</div>
+{% endblock %}
